@@ -94,7 +94,7 @@
             overflow: auto;
         }
 
-        .dropdown-layout {
+        .dropdown-menu {
             /* position: absolute; */
             z-index: 999;
         }
@@ -379,6 +379,18 @@
             $("#icon_bootstrapExample").addClass("fa-chevron-right");
           }
         });
+
+        $(".d-navbar").click(function(){
+          var showdropdown = $('.dropdown-menu').hasClass('show')
+        //   console.log(showdropdown);
+        if(showdropdown){
+            $(".d-navbar").css("height", "500px");
+        } else {
+            $(".d-navbar").css("height", "auto");
+        }
+        });
+
+        
 
         // console.log($('#li_bootstrapExample').hasClass('active'))
         // $('li.menu').hasClass('active');
